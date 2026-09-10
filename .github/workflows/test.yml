@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
       - run: npm cit
         env:
-          BATS_LIB_PATH: ${{ github.workspace }}/node_modules
+          BATS_LIB_PATH: ${{ github.workspace }}/node_modules/@bats-hardened
 
   npm-test-bash-versions:
     if: inputs.npm
@@ -40,7 +40,7 @@ jobs:
       - run: apk add --update npm
       - run: npm cit
         env:
-          BATS_LIB_PATH: ${{ github.workspace }}/node_modules
+          BATS_LIB_PATH: ${{ github.workspace }}/node_modules/@bats-hardened
 
   dependency-review:
     if: startsWith('pull_request', github.event_name)
