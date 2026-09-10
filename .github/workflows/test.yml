@@ -23,7 +23,7 @@ jobs:
       - run: npm ci
       - run: npx bats -t test
         env:
-          BATS_LIB_PATH: ${{ github.workspace }}/node_modules
+          BATS_LIB_PATH: ${{ github.workspace }}/node_modules/@bats-hardened
 
   npm-test-bash-versions:
     if: inputs.npm
@@ -41,7 +41,7 @@ jobs:
       - run: apk add --update npm
       - run: npm cit
         env:
-          BATS_LIB_PATH: ${{ github.workspace }}/node_modules
+          BATS_LIB_PATH: ${{ github.workspace }}/node_modules/@bats-hardened
 
   dependency-review:
     if: startsWith('pull_request', github.event_name)
