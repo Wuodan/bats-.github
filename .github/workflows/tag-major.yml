@@ -1,4 +1,4 @@
-# Truncate pushed tags and force-push as vN major version branch (necessary for workflow_call)
+# Truncate pushed tags and force-push as a moving vN major version tag (necessary for workflow_call)
 # This workflow assumes the latest tag is the "highest" for its vMajor
 name: Tag Major Version
 
@@ -16,4 +16,4 @@ jobs:
         run: |
           tag=${tag#refs/tags/}
           major=${tag%%.*}
-          git push -f origin "HEAD:refs/heads/$major"
+          git push -f origin "HEAD:refs/tags/$major"
