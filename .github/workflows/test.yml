@@ -10,6 +10,12 @@ on:
 
 permissions: { contents: read }
 jobs:
+  super-linter:
+    name: Run Super-Linter
+    uses: ./.github/workflows/super-linter.yml
+    permissions:
+      contents: read
+
   npm-test:
     if: inputs.npm
     runs-on: ${{ matrix.os }}
