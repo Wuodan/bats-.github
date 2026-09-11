@@ -1,0 +1,15 @@
+{
+  "version": "0.2",
+  "language": "en",
+  "ignorePaths": ["**/.git/**"],
+  "words": [
+    "Karns",
+    "Tamayo",
+    "ZIZMOR",
+    "ossf",
+    "pipefail",
+    "sarif",
+    "sublicensable",
+    "zizmor"
+  ]
+}
