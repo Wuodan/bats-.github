@@ -3,7 +3,9 @@
 name: Tag Major Version
 
 on:
-  push: { tags: "v*.*.*" }
+  push:
+    tags:
+      - "v*.*.*"
   workflow_call:
 
 jobs:
